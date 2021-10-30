@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin">
+
+        <com.cielyang.android.clearableedittext.ClearableEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/label_email"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        app:passwordToggleEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/label_password"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvResetPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:gravity="right"
+        android:text="@string/msg_forget_password_text" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:background="#e8bf31"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/label_login"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textSize="@dimen/large_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/default_margin"
+        android:text="or" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/default_margin"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLoginGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_weight="1"
+            android:background="#d34836"
+            android:drawableRight="@drawable/ic_googleplus_white"
+            android:paddingLeft="@dimen/btPadding"
+            android:paddingRight="@dimen/btPadding"
+            android:text="@string/label_sign_in_with"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/btnLoginFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_weight="1"
+            android:background="#4267b2"
+            android:drawableRight="@drawable/ic_facebook_white"
+            android:paddingLeft="@dimen/btPadding"
+            android:paddingRight="@dimen/btPadding"
+            android:text="@string/label_sign_in_with"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</LinearLayout>
